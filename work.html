@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="css/stylesheet.less" type="text/less" />
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 <script type="text/javascript" src="lib/jquery-ui-touch-punch.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="lib/jquery.masonry.js"></script>
 <script type="text/javascript" src="lib/jquery.throttledresize.js"></script>
 <script type="text/javascript" src="js/broadShoulderLayout.js"></script>
+<script type="text/javascript" src="lib/jquery.scrollTo-1.4.3.1-min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	
@@ -26,21 +27,26 @@ $(document).ready(function(){
 	$(window).on("throttledresize", function( event ) {
 		windowResize();
 	});
-	
 	//Sets the columns on refresh
-	$(document).ready(function(){
-		windowResize();
-		$('.broadShoulderContainer').masonry({
-			itemSelector: '.contentArea',
-			isAnimated : true,
-						animationOptions: {
-						   duration: 400
-					   },
-			columnWidth: function( containerWidth ) {
-				return containerWidth / columnCount;
-			}
-		});
-	});	
+	windowResize();
+	$('.broadShoulderContainer').masonry({
+		itemSelector: '.contentArea',
+		isAnimated : true,
+					animationOptions: {
+					   duration: 400
+				   },
+		columnWidth: function( containerWidth ) {
+			return containerWidth / columnCount;
+		}
+	});
+	//Scroll to hash
+	$('.drawLinks a').click(function(event){
+		$('html, body').animate({
+			scrollTop: $( $.attr(this, 'href') ).offset().top
+		}, 2000);
+		return false;
+	});
+	
 });
 </script>
 
@@ -90,9 +96,9 @@ $(document).ready(function(){
 						<span class="internalCloseBtn">Close</span>
 						<h3>Sections of work</h3>
 						<ul class="drawLinks">
-							<li><a href="#jQuery">jQuery</a>
+							<li><a href="#jQuery">Javascript and jQuery</a>
 								<ul>
-									<li><a href="#jQueryUI">jQuery UI examples</a></li>
+									<li><a href="#jQueryExamples">jQuery examples</a></li>
 									<li><a href="#masonry">Masonry.js example</a></li>
 									<!--<li><a href="#">Messages example</a></li>-->
 									<!--<li><a href="#">Other examples...</a></li>-->
@@ -127,43 +133,81 @@ $(document).ready(function(){
 					
 						<div class="hero-unit workPage">
 							<h1>Work I've done in the last 6 months...and live sites</h1>
-							<h2>I also have experience of Agile working, the use of a shared code base using Mercurial, Django and basic Python.</h2>
+							<h2>I also have experience of Agile working, the use of a shared code base using Git and Mercurial, Django templating and basic .NET and Python.</h2>
 						</div>
 						
-						<h2><a name="jQuery" class="drawLink">jQuery Examples</a></h2>
+						<h2><a id="jQuery" class="drawLink">Javascript/jQuery Examples</a></h2>
 						
 						<article class="workExample">
 						 
-							<h3><a name="jQueryUI" class="drawLink">jQuery UI</a></h3>
-							<p class="lead">I have used jQuery UI for the creation of many components...</p>
+							<h3><a id="jQueryExamples" class="drawLink">Javascript/jQuery</a></h3>
+							<p class="lead">Handwritten jQuery to create interactive UI elements.</p>
 							<ul class="thumbnails">
-								<li class="span4">
+								<li class="span3">
 									<div class="thumbnail">
-										<img src="images/uiThumb2.png" alt="ui thumb 2" />
+										<img src="images/jQueryDraw.png" alt="Draggable content draw" />
 										<h3>Draggable content draw</h3> 
-										<p>As used on this page, above</p>
+										<p>As used on this page, above.</p>
 									</div>
 								</li>
-								<li class="span4">
+								<li class="span3">
 									<div class="thumbnail">
-										<img src="images/uiThumb3.png" alt="ui thumb 3" />
-										<h3>Tabs</h3> 
-										<p>Used to hide/show content on a form</p>
-									</div>
-								</li>
-								<li class="span4">
-									<div class="thumbnail">
-										<img src="images/uiThumb1.png" alt="ui thumb 1" />
+										<img src="images/jQueryWidgets.png" alt="Drag and drop widgets" />
 										<h3>Drag and drop widgets</h3>
-										<p>Grid of widgets that are draggable/droppable</p>
+										<p>Grid of widgets that are draggable/droppable.</p>
+									</div>
+								</li>
+								<li class="span3">
+									<div class="thumbnail">
+										<img src="images/jQueryTabs.png" alt="Tabs" />
+										<h3>Tabs</h3> 
+										<p>A standard web UI technique.</p>
+									</div>
+								</li>
+								<li class="span3">
+									<div class="thumbnail">
+										<img src="images/jQueryAccordion.png" alt="Accordion" />
+										<h3>Accordion</h3> 
+										<p>Another standard web UI technique...</p>
 									</div>
 								</li>
 							</ul>
+							<ul class="thumbnails">
+								<li class="span3">
+									<div class="thumbnail">
+										<img src="images/jQueryGMaps.png" alt="Google maps" />
+										<h3>Google maps API 3</h3> 
+										<p>Interactive apps using Google maps</p>
+									</div>
+								</li>
+								<li class="span3">
+									<div class="thumbnail">
+										<img src="images/jQuerySlider.png" alt="Image Carousel" />
+										<h3>Image Carousel</h3>
+										<p>Sliding image carousel</p>
+									</div>
+								</li>
+								<li class="span3">
+									<div class="thumbnail">
+										<img src="images/jQueryVirtualTour.png" alt="Virtual Tour" />
+										<h3>Virtual Tour</h3> 
+										<p>Interactive clickable markers</p>
+									</div>
+								</li>
+								<li class="span3">
+									<div class="thumbnail">
+										<img src="images/jQueryPlugins.png" alt="Plugins" />
+										<h3>Expanding plugins</h3> 
+										<p>Using callbacks to extend plugins</p>
+									</div>
+								</li>
+							</ul>
+							<p class="lead">As well as the above I've used Javascript and jQuery to create drop down navigation menus, form validation, full page sliding sites, full screen backgrounds, and much more.</p>
 
 						</article>
 						
 						<article class="workExample">	
-							<h3><a name="masonry" class="drawLink">Masonry.js</a></h3>
+							<h3><a id="masonry" class="drawLink">Masonry.js</a></h3>
 							
 							<p>I used Masonry.js to solve a problem outlined by our UX desinger. We had a layout for a page that was in columns. On 1200px width devices there would be 4 columns, 1200px - 768px there would be 
 							3 columns, 767px - 480px there would be 2 columns and for 480px and down there would be 1 column. These boudaries were decided by the minimum width of the content that was to go inside the columns.</p>
@@ -201,7 +245,7 @@ $(document).ready(function(){
 					<div class="row-fluid">		
 						
 						
-						<h2><a name="responsive" class="drawLink">Responsive Design</a></h2>
+						<h2><a id="responsive" class="drawLink">Responsive Design</a></h2>
 						
 						<article class="workExample">
 							
@@ -248,7 +292,7 @@ $(document).ready(function(){
 					<div class="row-fluid">		
 						
 						
-						<h2><a name="less" class="drawLink">LESS</a></h2>
+						<h2><a id="less" class="drawLink">LESS</a></h2>
 						
 						<article class="workExample">
 							
@@ -326,7 +370,40 @@ header{
 				<div class="span12">				
 					<div class="row-fluid">	
 					
-						<h2><a name="liveSites" class="drawLink">Live sites from my last web developemnt role</a></h2>
+						<h2><a id="liveSites" class="drawLink">Most current live sites</a></h2>
+						<p>Skills: HTML5, LESS, jQuery, .NET, MVC framework, Git</p>
+
+						<article class="workExample">
+							<ul class="thumbnails">
+								<li class="span4">
+									<a href="http://www.kilbeggandistillery.com/" class="thumbnail" target="_new">
+										<img src="images/kdeThumb.png" alt="KDE Thumb" />
+										<h3>Kilbeggan Distillery Experience</h3>
+										<p>Re-designed site, fully responsive<br /> 
+										Work done: HTML5, LESS, jQuery, Bootstrap</p>
+									</a>
+								</li>
+								<li class="span4">
+									<a href="http://www.kilbeggandistillingcompany.com/" class="thumbnail" target="_new">
+										<img src="images/KDCThumb.png" alt="KDC Thumb" />
+										<h3>Kilbeggan Distilling Company</h3>
+										<p>New responsive site<br /> 
+										Work done: HTML5, LESS, jQuery, Bootstrap</p>
+									</a>
+								</li>
+								<li class="span4">
+									<a href="http://www.kilbegganwhiskey.com/" class="thumbnail" target="_new">
+										<img src="images/kwThumb.png" alt="KDE Thumb" />
+										<h3>Kilbeggan Whiskey</h3>
+										<p>New responsive site<br /> 
+										Work done: HTML5, LESS, jQuery, Bootstrap</p>
+									</a>
+								</li>
+							</ul>
+							<p>More site currently being developed...</p>
+						</article>
+
+						<h2><a name="liveSites" class="drawLink">Sites developed in an earlier role</a></h2>
 						<p>Skills: (X)HTML, CSS, jQuery. Built on the Kentico CMS</p>
 					
 						<article class="workExample">

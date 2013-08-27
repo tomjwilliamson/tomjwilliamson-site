@@ -47,10 +47,6 @@ $(document).ready(function(){
 		$clone.val('');
 		$clone.prependTo('.form-search');		
 	});
-	//$('.form-search')
-	
-
-	
 	
 	
 
