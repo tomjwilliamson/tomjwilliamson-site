@@ -417,7 +417,14 @@ header{
 										Work done: HTML, CSS, jQuery for drop down and left navigation menu</p>
 									</a>
 								</li>
-								
+								<li class="span4">
+									<a href="http://www.cloud-spend-management.com/" class="thumbnail" target="_new">
+										<img src="images/compleatSpendThumb.png" alt="Compleat Spend Control Thumb" />
+										<h3>Compleat Spend Control</h3>
+										<p>Brand new site built around the Kentico CMS.<br /> 
+										Work done: HTML, CSS, jQuery for left navigation menu.</p>
+									</a>
+								</li>
 								<li class="span4">
 									<a href="http://www.cbceurope.com/" class="thumbnail" target="_new">
 										<img src="images/cbcThumb.png" alt="CBC Europe Thumb" />
@@ -426,6 +433,8 @@ header{
 										Work done: HTML, CSS, jQuery for drop down and left navigation menu</p>
 									</a>
 								</li>
+							</ul>
+							<ul class="thumbnails">
 								<li class="span4">
 									<a href="http://www.him.uk.com/" class="thumbnail" target="_new">
 										<img src="images/himThumb.png" alt="Him! Thumb" />
@@ -434,14 +443,31 @@ header{
 										Work done: HTML, CSS, jQuery</p>
 									</a>
 								</li>
-							</ul>
-							<ul class="thumbnails">								
+								<li class="span4">
+									<a href="http://www.sportivenation.co.uk/" class="thumbnail" target="_new">
+										<img src="images/sportiveThumb.png" alt="Sportive Nation Thumb" />
+										<h3>Sportive Nation</h3>
+										<p>Brand new e-commerce site built around the Kentico CMS.<br /> 
+										Work done: HTML, CSS, jQuery for navigation and images.</p>
+									</a>
+								</li>
 								<li class="span4">
 									<a href="http://www.skcin.org/" class="thumbnail" target="_new">
 										<img src="images/skcinThumb.png" alt="Skcin Thumb" />
 										<h3>Skcin</h3>
 										<p>Re-design of their old site, built around the Kentico CMS.<br /> 
 										Work done: HTML, CSS, jQuery for drop down and image carousel</p>
+									</a>
+								</li>
+								
+							</ul>
+							<ul class="thumbnails">
+								<li class="span4">
+									<a href="http://www.curvyandstylish.co.uk/" class="thumbnail" target="_new">
+										<img src="images/curvyStylishThumb.png" alt="Curvy and Stylish Thumb" />
+										<h3>Curvy and Stylish</h3>
+										<p>Brand new e-commerce site built around the Kentico CMS.<br /> 
+										Work done: HTML, CSS, jQuery for product images</p>
 									</a>
 								</li>
 								<li class="span4">
@@ -460,34 +486,6 @@ header{
 										Work done: HTML, CSS, jQuery</p>
 									</a>
 								</li>
-								
-							</ul>
-							<ul class="thumbnails">
-								<!-- <li class="span4">
-									<a href="http://www.curvyandstylish.co.uk/" class="thumbnail" target="_new">
-										<img src="images/curvyStylishThumb.png" alt="Curvy and Stylish Thumb" />
-										<h3>Curvy and Stylish</h3>
-										<p>Brand new e-commerce site built around the Kentico CMS.<br /> 
-										Work done: HTML, CSS, jQuery for product images</p>
-									</a>
-								</li> -->
-								<!-- <li class="span4">
-									<a href="http://www.sportivenation.co.uk/" class="thumbnail" target="_new">
-										<img src="images/sportiveThumb.png" alt="Sportive Nation Thumb" />
-										<h3>Sportive Nation</h3>
-										<p>Brand new e-commerce site built around the Kentico CMS.<br /> 
-										Work done: HTML, CSS, jQuery for navigation and images.</p>
-									</a>
-								</li> -->
-								<!-- <li class="span4">
-									<a href="http://www.cloud-spend-management.com/" class="thumbnail" target="_new">
-										<img src="images/compleatSpendThumb.png" alt="Compleat Spend Control Thumb" />
-										<h3>Compleat Spend Control</h3>
-										<p>Brand new site built around the Kentico CMS.<br /> 
-										Work done: HTML, CSS, jQuery for left navigation menu.</p>
-									</a>
-								</li> -->
-								
 								
 							</ul>
 							
